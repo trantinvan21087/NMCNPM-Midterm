@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 # Create your views here.
 from .models import *
@@ -33,3 +33,4 @@ def customer(request, pk_test):
 
 	context = {'customer':customer, 'orders':orders, 'order_count':order_count}
 	return render(request, 'accounts/customer.html',context)
+
